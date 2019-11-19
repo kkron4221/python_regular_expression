@@ -1,0 +1,13 @@
+import re
+
+name  = "name(25)"
+hoge = "・hogehoge"
+
+re_name = re.compile(r'.+(?=\()')
+re_hoge = re.compile(r'(?<=・).+')
+
+print_name = re_name.search(name)
+print_hoge = re_hoge.search(hoge)
+
+print(print_name.group())
+print(print_hoge.group())
